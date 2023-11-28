@@ -8,6 +8,12 @@
   text-transform: uppercase;
 }
 
+.main_header, .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -186,6 +192,26 @@ ul {
   color: #f16d7f;
 }
 
+.main_header {
+  margin-bottom: 60px;
+}
+.main_header_title {
+  font-family: Lato, serif;
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #222222;
+}
+.main_header_desc {
+  font-family: Lato, serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #9f9f9f;
+}
+
 .main_top {
   position: relative;
   margin-bottom: 123px;
@@ -221,6 +247,178 @@ ul {
 }
 .main_top_head_content_subtitle_color {
   color: #f16d7f;
+}
+
+.main_features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222224;
+  margin-bottom: 97px;
+}
+.main_features_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 62px;
+  width: 20%;
+}
+.main_features_list_item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main_features_list_item_icon {
+  margin-right: 34px;
+}
+.main_features_list_item_desc_title {
+  font-family: Lato, serif;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #fbfbfb;
+  margin-bottom: 17px;
+}
+.main_features_list_item_desc_parag {
+  font-family: Lato, serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  color: #fbfbfb;
+}
+
+.footer_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 443px;
+  background: #ffffff;
+  position: relative;
+  margin-bottom: 109px;
+  gap: 165px;
+}
+.footer_top_left {
+  width: 35%;
+}
+.footer_top_left_review {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+.footer_top_left_review_photo {
+  z-index: 2;
+}
+.footer_top_left_review_comment_parag {
+  font-family: Lato, serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #222222;
+  font-style: italic;
+  z-index: 2;
+  margin-bottom: 19px;
+}
+.footer_top_left_review_comment_sign1 {
+  font-family: Lato, serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #f16d7f;
+  z-index: 2;
+}
+.footer_top_left_review_comment_sign2 {
+  font-family: Lato, serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  color: #222222;
+  z-index: 2;
+}
+.footer_top_right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer_top_right_title {
+  font-family: Lato, serif;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #222222;
+  z-index: 2;
+}
+.footer_top_right_subtitle {
+  font-family: Lato, serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #222222;
+  z-index: 2;
+  margin-bottom: 35px;
+}
+.footer_top_right_form {
+  display: flex;
+}
+.footer_top_right_form_input {
+  background: #E1E1E1;
+  font-family: Lato, serif;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #222222;
+  font-style: normal;
+  padding: 1rem 1.5rem;
+  border: 0;
+  border-radius: 500em 0 0 500em;
+  width: 256px;
+  z-index: 2;
+}
+.footer_top_right_form_button {
+  text-align: center;
+  background: #f16d7f;
+  font-family: Lato, serif;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #222222;
+  font-style: normal;
+  border-radius: 0 500em 500em 0;
+  width: 100px;
+  padding: 1rem 1rem;
+  transition: all 0.3s;
+  z-index: 2;
+}
+.footer_top_right_form_button:hover {
+  color: #f16d7f;
+  background: #ffffff;
+  border: 1px solid #f16d7f;
+}
+
+.footer_top::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.3;
+  background-image: url("../img/Layer 41.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  z-index: 1;
 }
 
 .footer_center {
