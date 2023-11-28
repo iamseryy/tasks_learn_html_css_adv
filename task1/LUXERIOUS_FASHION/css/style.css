@@ -42,9 +42,14 @@ ul {
   list-style-type: none;
 }
 
-.center {
+.center_base {
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
+}
+
+.center_full {
+  padding-left: calc(50% - 800px);
+  padding-right: calc(50% - 800px);
 }
 
 .header_top {
@@ -64,7 +69,7 @@ ul {
 }
 .header_top_left_search_browse {
   display: flex;
-  font-family: Lato;
+  font-family: Lato, serif;
   font-size: 14px;
   line-height: 32px;
   font-weight: 400;
@@ -89,7 +94,7 @@ ul {
   background-image: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
 }
 .header_top_left_search_input {
-  font-family: Lato;
+  font-family: Lato, serif;
   font-size: 14px;
   line-height: 32px;
   font-weight: 300;
@@ -100,7 +105,7 @@ ul {
   padding: 3px 124px 3px 16px;
 }
 .header_top_left_search_icon {
-  font-family: Lato;
+  font-family: Lato, serif;
   font-size: 14px;
   line-height: 32px;
   font-weight: 400;
@@ -139,7 +144,7 @@ ul {
 }
 .header_top_right_button {
   display: flex;
-  font-family: Lato;
+  font-family: Lato, serif;
   font-size: 15px;
   line-height: 32px;
   font-weight: 400;
@@ -181,4 +186,150 @@ ul {
   color: #f16d7f;
 }
 
-/*# sourceMappingURL=Style.css.map */
+.main_top {
+  position: relative;
+  margin-bottom: 123px;
+}
+.main_top_head {
+  display: flex;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: left;
+  z-index: 4;
+}
+.main_top_head_content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+}
+.main_top_head_content_title {
+  font-family: Lato, serif;
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: 0.025em;
+  color: #222222;
+}
+.main_top_head_content_subtitle {
+  font-family: Lato, serif;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: 0.025em;
+  color: #222222;
+}
+.main_top_head_content_subtitle_color {
+  color: #f16d7f;
+}
+
+.footer_center {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  margin-bottom: 89px;
+}
+.footer_center_left {
+  width: 40%;
+}
+.footer_center_left_section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 29px;
+}
+.footer_center_left_section_desc {
+  font-family: Lato, serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  color: #898989;
+}
+.footer_center_right {
+  width: 60%;
+}
+.footer_center_right_menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-top: 14px;
+}
+.footer_center_right_menu_col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer_center_right_menu_col_title {
+  font-family: Lato, serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #f16d7f;
+  margin-bottom: 40px;
+}
+.footer_center_right_menu_col_items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer_center_right_menu_col_items_item {
+  font-family: Lato, serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #898989;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: all 0.3s;
+}
+.footer_center_right_menu_col_items_item:hover {
+  color: #f16d7f;
+}
+
+.footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 79px;
+  background-color: #e6e6e6;
+}
+.footer_bottom_left_copyright {
+  font-family: Lato;
+  font-size: 16px;
+  line-height: 42px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #7a7a7a;
+}
+.footer_bottom_right_networks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer_bottom_right_networks_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: #ffffff;
+  transition: all 0.3s;
+}
+.footer_bottom_right_networks_item_icon {
+  display: flex;
+  align-content: center;
+}
+.footer_bottom_right_networks_item_icon_svg path {
+  fill: #b2b2b2;
+}
+.footer_bottom_right_networks_item:hover {
+  background: #F16D7F;
+}
+.footer_bottom_right_networks_item:hover path {
+  fill: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */
