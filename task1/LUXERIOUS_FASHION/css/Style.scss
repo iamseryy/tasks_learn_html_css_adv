@@ -1,6 +1,17 @@
 @import 'vars';
 @import "fonts";
 
+
+%font {
+  font-family: Lato;
+  font-size: 27px;
+  line-height: 32px;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  color: $baseContentColor;
+  text-transform: uppercase;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -95,13 +106,7 @@ ul {
           height: 51px;
         }
         &_title {
-          font-family: Lato;
-          font-size: 27px;
-          line-height: 32px;
-          font-weight: 300;
-          letter-spacing: 0.025em;
-          color: $baseContentColor;
-          text-transform: uppercase;
+          @extend %font;
           padding-top: 20px;
           padding-bottom: 12px;
           &_last {
