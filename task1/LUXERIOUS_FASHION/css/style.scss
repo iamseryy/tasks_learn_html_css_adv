@@ -2,20 +2,23 @@
 @import "fonts";
 @import "positions";
 
-%font {
-  font-family: Lato;
-  font-size: 27px;
-  line-height: 32px;
-  font-weight: 300;
-  letter-spacing: 0.025em;
-  color: $baseContentColor;
-  text-transform: uppercase;
-}
 
 %column_center {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+%column_start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+%flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 * {
@@ -115,7 +118,8 @@ ul {
           height: 51px;
         }
         &_title {
-          @extend %font;
+          @include fontTitle(27px, 32px, 300, $baseContentColor);
+          text-transform: uppercase;
           padding-top: 20px;
           padding-bottom: 12px;
           &_last {
@@ -211,38 +215,116 @@ ul {
   }
 }
 
-.main_features {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #222224;
-  margin-bottom: 97px;
-  &_img {
-
-  }
-  &_list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 62px;
-    width: 20%;
+.main_deals {
+  @extend %flex_center;
+  margin-bottom: 100px;
+  gap: 20px;
+  &_col {
+    @extend %column_center;
     &_item {
-
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      &_icon {
-        margin-right: 34px;
-      }
-      &_desc {
-
-        &_title {
-          @include fontTitle(20px, 1.2, 700, #fbfbfb);
-          margin-bottom: 17px;
+      position: relative;
+      &_info {
+        padding: 1rem 1rem 1rem 1rem;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        text-align:left;
+        background-color: $baseBackgroundColor;
+        z-index: 4;
+        &_subtitle {
+          @include fontTitle(18px, 1.2, 900, $baseContentColor);
+          text-transform: uppercase;
         }
-        &_parag {
-          @include fontTitle(14px, 24px, 300, #fbfbfb);
+        &_title {
+          @include fontTitle(30px, 1.2, 900, $baseSelectColor);
+          text-transform: uppercase;
+        }
+      }
+    }
+    gap:20px;
+  }
+  &_left {
+    @extend %column_center;
+    gap: 20px;
+  }
+}
 
+.main_items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 79px;
+  &_item {
+    @extend %column_start;
+    &_img {
+      margin-bottom: 19px;
+    }
+    &_info {
+      &_title {
+        @include fontTitle(13px, 1.2, 600, $baseContentColor);
+        text-transform: uppercase;
+        margin-bottom: 17px;
+      }
+      &_price {
+        @include fontTitle(16px, 1.2, 700, $baseSelectColor);
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+    }
+
+  }
+}
+
+.main_button {
+  @extend %column_center;
+  margin-bottom: 113px;
+  &_link {
+    text-decoration: none;
+    background: $baseSelectColor;
+    @include fontTitle(16px, normal, 400, $baseBackgroundColor);
+    font-style: normal;
+    padding: 1rem 2rem;
+    border: 1px solid $baseSelectColor;
+    transition: all 0.3s;
+  }
+  &_link:hover {
+    color: $baseSelectColor;
+    background: $baseBackgroundColor;
+  }
+}
+
+.main_features {
+  margin-bottom: 97px;
+  &_content {
+    background-color: #222224;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    &_list {
+      @extend %column_start;
+      gap: 30px;
+      &_item {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-right: 43px;
+        &_icon {
+          margin-right: 34px;
+        }
+        &_desc {
+
+          &_title {
+            @include fontTitle(20px, 1.2, 700, #fbfbfb);
+            margin-bottom: 17px;
+          }
+          &_parag {
+            @include fontTitle(14px, 24px, 300, #fbfbfb);
+
+          }
         }
       }
     }
@@ -250,9 +332,7 @@ ul {
 }
 
 .footer_top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex_center;
   height: 443px;
   background: $baseBackgroundColor;
   position: relative;
@@ -261,9 +341,7 @@ ul {
   &_left {
     width: 35%;
     &_review {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @extend %flex_center;
       gap: 28px;
       &_photo {
         z-index: 2;
@@ -287,9 +365,7 @@ ul {
     }
   }
   &_right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend %column_center;
     &_title {
       @include fontTitle(24px, 34px, 400, $baseContentColor);
       z-index: 2;
@@ -356,9 +432,7 @@ ul {
   &_left {
     width: 40%;
     &_section {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      @extend %column_start;
       gap: 29px;
       &_desc {
         @include fontTitle(14px, 24px, 300, #898989);
@@ -373,17 +447,13 @@ ul {
       justify-content: space-around;
       padding-top: 14px;
       &_col {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        @extend %column_start;
         &_title {
           @include fontTitle(18px, 26px, 700, $baseSelectColor);
           margin-bottom: 40px;
         }
         &_items {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
+          @extend %column_start;
           &_item {
             @include fontTitle(16px, 40px,400, #898989);
             padding-top: 1rem;
@@ -420,9 +490,7 @@ ul {
     align-items: center;
     gap: 8px;
     &_item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @extend %flex_center;
       width: 32px;
       height: 32px;
       background-color: $baseBackgroundColor;
