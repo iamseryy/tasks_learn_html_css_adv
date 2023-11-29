@@ -1,1 +1,4 @@
-# tasks_learn_html_css_adv
+# Продвинутый HTML + CSS
+| №   | **Task**                                                                      | **Description**                                        |
+|-----|-------------------------------------------------------------------------------|--------------------------------------------------------|
+| 1   | **[Task1](https://github.com/iamseryy/tasks_learn_html_css_adv/tree/main/task1)** | Препроцессы|
