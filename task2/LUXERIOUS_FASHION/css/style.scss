@@ -69,6 +69,7 @@ ul {
     align-items: center;
     justify-content: space-between;
     height: 100px;
+    margin-bottom: 19px;
     &_left {
       display: flex;
       align-items: center;
@@ -155,6 +156,8 @@ ul {
       display: flex;
       justify-content: center;
       gap: $topMenuGap;
+      margin-bottom: 22px;
+
       &_list {
         position: relative;
         &_link {
@@ -175,14 +178,42 @@ ul {
   }
 }
 
+.header_nav_menu_list:hover .menu_box {
+  display: flex;
+}
+
 .menu_box {
+  display: none;
   padding: 20px;
   border: 1px solid #e8e8e8;
   border-radius: 5px;
   background-color: $baseBackgroundColor;
   position: absolute;
   z-index: 2;
-  top: 51px;
+  top: 40px;
+}
+
+.menu_box::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: $baseBackgroundColor;
+  position: absolute;
+  top: -6px;
+  left: 11px;
+  right: auto;
+  transform: rotate(45deg);
+  border-left: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+}
+
+.menu_item {
+  margin-right: 45px;
+}
+
+.menu_item:last-of-type {
+  margin-right: 0px;
 }
 
 .menu_title {
@@ -196,6 +227,21 @@ ul {
 .item {
   display: block;
   @include fontTitle(14px, 28px, 400, #646464);
+  transition: all 0.3s;
+}
+
+.item:hover {
+  color: $baseSelectColor;
+}
+
+.last:hover .menu_box {
+  right: 0;
+  left: auto;
+}
+
+.last:hover .menu_box:before {
+  right: 35px;
+  left: auto;
 }
 
 .main {
