@@ -1,4 +1,4 @@
-.footer_top_right, .main_button, .main_deals_left, .main_deals_col, .main_header, .main {
+.footer_top_right, .main_button, .main_items_section, .main_deals_left, .main_deals_col, .main_items_header_prod, .main_header_indx, .main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -241,7 +241,7 @@ ul {
 }
 
 .menu_item:last-of-type {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .menu_title {
@@ -282,10 +282,48 @@ ul {
   left: auto;
 }
 
-.main_header {
+.main_header_prod {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50%;
+  height: 148px;
+  background-color: #f8f3f4;
+}
+.main_header_prod_title {
+  font-family: Lato, serif;
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 900;
+  letter-spacing: 0.025em;
+  color: #f16d7f;
+}
+.main_header_prod_breadcrumbs_link {
+  padding: 1rem 0 1rem 0;
+  font-family: Lato, serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  color: #636363;
+  text-transform: uppercase;
+}
+.main_header_prod_breadcrumbs_link_span {
+  color: #636363;
+}
+.main_header_prod_breadcrumbs_link:hover {
+  color: #f16d7f;
+}
+
+.breadcrumbs_last_link {
+  font-weight: 700;
+}
+
+.main_header_indx {
   margin-bottom: 60px;
 }
-.main_header_title {
+.main_header_indx_title {
   font-family: Lato, serif;
   font-size: 30px;
   line-height: 44px;
@@ -293,13 +331,25 @@ ul {
   letter-spacing: 0.025em;
   color: #222222;
 }
-.main_header_desc {
+.main_header_indx_desc {
   font-family: Lato, serif;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 0.025em;
   color: #9f9f9f;
+}
+
+.main_items_header_prod {
+  margin-bottom: 72px;
+}
+.main_items_header_prod_title {
+  font-family: Lato, serif;
+  font-size: 24px;
+  line-height: 20x;
+  font-weight: 900;
+  letter-spacing: 0.025em;
+  color: #4d4d4d;
 }
 
 .main_top {
@@ -337,6 +387,32 @@ ul {
 }
 .main_top_head_content_subtitle_color {
   color: #f16d7f;
+}
+
+.main_slider_prod {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 777px;
+  background-color: #f7f7f7;
+  border: 1px solid #eaeaea;
+  position: relative;
+  z-index: 1;
+}
+.main_slider_prod_angles {
+  display: flex;
+  width: calc(50% - 800px);
+  top: 50%;
+  position: absolute;
+  z-index: 3;
+}
+.main_slider_prod_angles_angle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 18px 17px 21px;
+  background-color: rgba(42, 42, 42, 0.14);
+  color: #ffffff;
 }
 
 .main_deals {
