@@ -84,15 +84,17 @@ ul {
           border: 1px solid $baseItemBackgroundColor;
           border-radius: 3px 0px 0px 3px;
           padding: 3px 9px 3px 15px;
+          transition: all 0.3s;
           &_icon {
             @include fontIcon(14px, 400, #838383);
             padding-left: 8px;
           }
-          transition: all 0.3s;
         }
         &_browse:hover {
           background-image: linear-gradient(180.0deg, $baseBackgroundColor 0%, $baseBackgroundColor 100%);
+          display: block
         }
+
         &_input {
           @include fontButton(14px, 300, #a4a4a4, $baseBackgroundColor);
           border: 1px solid $baseItemBackgroundColor;
@@ -178,6 +180,22 @@ ul {
   }
 }
 
+.browse_menu {
+  position: relative;
+}
+
+.browse_menu_items {
+  padding: 20px;
+  display: none;
+  position: absolute;
+  background-color: $baseBackgroundColor;
+  z-index: 2;
+}
+
+.browse_menu:hover .browse_menu_items {
+  display: block;
+}
+
 .header_nav_menu_list:hover .menu_box {
   display: flex;
 }
@@ -210,6 +228,9 @@ ul {
 
 .menu_item {
   margin-right: 45px;
+  &_img{
+    padding-top: 22px;
+  }
 }
 
 .menu_item:last-of-type {
@@ -222,6 +243,10 @@ ul {
   @include fontTitle(14px, 32px, 400, #232323);
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+
+.menu_title_padding_top {
+  padding-top: 15px;
 }
 
 .item {
@@ -278,11 +303,6 @@ ul {
   font-weight: 700;
 }
 
-
-.prod_desc {
-
-}
-
 .main_header_indx {
   @extend %column_center;
   margin-bottom: 60px;
@@ -332,34 +352,148 @@ ul {
 
 .main_slider_prod {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 777px;
   background-color: #f7f7f7;
   border: 1px solid #eaeaea;
-  position: relative;
-  z-index: 1;
   &_angles {
-    display: flex;
-
-    width: calc(50% - $fullWidth / 2);
-    top: 50%;
-    position: absolute;
-    z-index: 3;
     &_angle {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       padding: 16px 18px 17px 21px ;
-
       background-color: rgba(42,42,42,0.14);
       color: $baseBackgroundColor;
-
+      transition: all 0.3s;
+    }
+    &_angle:hover {
+      color: rgba(42,42,42,0.14);
+      background-color: $baseBackgroundColor;
     }
   }
 }
 
+.main_order {
 
+}
+
+.order {
+  @extend %column_center;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 119px;
+  &_desc {
+
+    background-color: $baseBackgroundColor;
+    padding-top: 73px;
+    margin-top: -70px;
+    margin-bottom: 63px;
+    padding-left: 261px;
+    padding-right: 261px;
+    &_box {
+      @extend %column_center;
+      border-bottom: 1px solid #eaeaea;
+    }
+    &_header {
+      margin-bottom: 20px;
+      @extend %column_center;
+      &_title {
+        padding-top: 9px;
+        @include fontTitle(18px, 24px, 900, #4d4d4d);
+        margin-bottom: 67px;
+      }
+      &_devider {
+        width: 63px;
+        height: 3px;
+        background-color: $baseSelectColor;
+        margin-top: -2px;
+      }
+      &_subtitle {
+        @include fontTitle(14px, 24px, 700, $baseSelectColor);
+        padding-bottom: 7px;
+        border-bottom: 1px solid #eaeaea;
+      }
+      &_desc {
+        @include fontTitle(14px, 24px, 300, #5e5e5e);
+        text-align: center;
+        align-content: center;
+      }
+    }
+    &_attr {
+      display: flex;
+      justify-content: center;
+      gap: 44px;
+      margin-bottom: 37px;
+      &_key {
+        @include fontTitle(14px, 24px, 700, #b9b9b9);
+      }
+      &_val {
+        color: #2f2f2f;
+      }
+    }
+    &_price {
+      @include fontTitle(24px, 24px, 700, $baseSelectColor);
+      margin-bottom: 43px;
+    }
+  }
+
+  &_choose_box {
+
+  }
+
+  &_choose {
+    @extend %column_center;
+    gap: 28px;
+    &_attr {
+      display: flex;
+      justify-content: center;
+      gap: 53px;
+      &_item {
+        &_title {
+          @include fontTitle(14px, 24px, 700, #2f2f2f);
+          margin-bottom: 16px;
+        }
+        &_input {
+          width: 144px;
+          height: 35px;
+          border: 1px solid #eaeaea;
+          background-color: #ffffff;
+        }
+        &_val {
+          width: 144px;
+          height: 35px;
+          border: 1px solid #eaeaea;
+          background-color: #ffffff;
+          padding-left: 14px;
+          @include fontTitle(13px, 0px, 400, #bcbcbc);
+        }
+      }
+    }
+    &_button {
+      width: 100%;
+      margin-bottom: 122px;
+      &_link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        text-decoration: none;
+        background: $baseBackgroundColor;
+        @include fontTitle(16px, 1.2, 700, $baseSelectColor );
+        font-style: normal;
+        padding: 1rem 2rem;
+        border: 1px solid $baseSelectColor;
+        transition: all 0.3s;
+      }
+      &_link:hover {
+        color: $baseBackgroundColor;
+        background: $baseSelectColor;
+        path { fill: $baseBackgroundColor; }
+
+      }
+    }
+  }
+}
 
 .main_deals {
   @extend %flex_center;
@@ -406,6 +540,16 @@ ul {
   align-items: center;
   gap: 30px;
   margin-bottom: 79px;
+  &_title {
+    margin-bottom: 72px;
+    @include fontTitle(24px, 20px, 900, #4d4d4d);
+    font-family: Lato;
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #4d4d4d;
+  }
   &_item {
     @extend %column_start;
     &_img {
