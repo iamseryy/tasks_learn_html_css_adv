@@ -628,8 +628,20 @@ ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 30px;
   margin-bottom: 79px;
+}
+
+@supports (display: grid) {
+  .main_items {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    grid-column-gap: 3%;
+    grid-row-gap: 4%;
+  }
 }
 .main_items_title {
   margin-bottom: 72px;
@@ -639,12 +651,7 @@ ul {
   font-weight: 900;
   letter-spacing: 0.025em;
   color: #4d4d4d;
-  font-family: Lato;
-  font-size: 24px;
-  line-height: 20px;
-  font-weight: 900;
   text-transform: uppercase;
-  color: #4d4d4d;
 }
 .main_items_item {
   position: relative;
