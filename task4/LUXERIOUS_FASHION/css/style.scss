@@ -55,6 +55,11 @@ ul {
   list-style-type: none;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: $fullWidth;
+}
+
 .center_base {
   @include center_content($baseWidth);
 }
@@ -616,6 +621,211 @@ ul {
     display: flex;
   }
 }
+
+
+.breadcrumbs {
+  width: 100%;
+  height: 148px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #F8F3F4;
+  margin-bottom: 96px;
+  &__title {
+    @include fontTitle(24px, normal, 400, $baseSelectColor);
+  }
+}
+
+.cart-content {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 128px;
+  width: 100%;
+  &__cart{
+    width: 68.4%;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 72px;
+  }
+  &__item {
+    display: flex;
+    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+    position: relative;
+    max-width: 652px;
+  }
+  &__dsc {
+    padding: 22px 97px 62px 31px;
+  }
+  &__title {
+    @include fontTitle(24px, normal, 400, $baseContentColor);
+    font-style: normal;
+    margin-bottom: 42px;
+    width: 200px;
+  }
+  &__params {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  &__param {
+    @include fontTitle(22px, normal, 400, #575757);
+    font-style: normal;
+    &_red {
+      color: $baseSelectColor;
+    }
+    &_grey {
+      color: #6F6E6E;
+    }
+  }
+  &__input {
+    @include fontTitle(18px, normal, 400, #656565);
+    font-style: normal;
+    width: 44px;
+    padding-left: 16px;
+    margin-left: 24px;
+    border: 1px solid #EAEAEA;
+  }
+  &__del {
+    position: absolute;
+    background: 0;
+    border: none;
+    cursor: pointer;
+    top: 28px;
+    right: 22px;
+    transition: all 0.3s;
+  }
+  &__del:hover {
+    path { fill: $baseSelectColor; }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 652px;
+  }
+  &__button {
+    @include fontTitle(14px, normal, 300, #000);
+    font-style: normal;
+    padding: 17px 41px 16px 39px;
+    border: 1px solid #A4A4A4;
+    transition: all 0.3s;
+  }
+  &__button:hover {
+    color: $baseBackgroundColor;
+    background-color: $baseSelectColor;
+    border: 1px solid $baseSelectColor;
+  }
+  &__checkout {
+    width: 31.6%;
+  }
+  &__form {
+    @extend %column_start;
+    width: 100%;
+  }
+  &__form-tittle {
+    @include fontTitle(16px, normal, 300, $baseContentColor);
+    font-style: normal;
+    padding-top: 17px;
+    margin-bottom: 20px;
+  }
+  &__inputs {
+    @extend %column_start;
+    gap: 20px;
+    margin-bottom: 23px;
+    width: 100%;
+  }
+  &__field-input{
+    width: 100%;
+  }
+  &__form-input {
+    max-width: 360px;
+    border: 1px solid #A4A4A4;
+    @include fontTitle(13px, normal, 300, $baseContentColor);
+    font-style: normal;
+    padding-top: 13px;
+    padding-bottom: 16px;
+    padding-left: 17px;
+    width: 100%;
+  }
+  &__quote-btn {
+    @include fontTitle(11px, normal, 300, #4A4A4A);
+    font-style: normal;
+    border: 1px solid #A4A4A4;
+    padding: 12px 14px 12px 14px;
+    margin-bottom: 57px;
+    transition: all 0.3s;
+  }
+  &__quote-btn:hover {
+    color: $baseBackgroundColor;
+    background-color: $baseSelectColor;
+    border: 1px solid $baseSelectColor;
+  }
+  &__total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: #F5F3F3;
+  }
+  &__total-titles{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    padding-top: 39px;
+    padding-right: 34px;
+    margin-bottom: 21px;
+  }
+  &__total-subtitle, &__total-title {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+  &__subtitle-name, &__subtitle-amount {
+    @include fontTitle(11px, normal, 400, #4A4A4A);
+    font-style: normal;
+  }
+  &__title-name, &__title-amount {
+    @include fontTitle(16px, normal, 300, #222);
+    font-style: normal;
+  }
+  &__title-amount {
+    color: $baseSelectColor;
+    font-weight: 700;
+  }
+  &__separator {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 17px;
+  }
+  &__separator-border {
+    max-width: 275px;
+    background-color: #E2E2E2;
+    height: 1px;
+    width: 100%;
+  }
+  &__checkout-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__checkout-link {
+    @include fontTitle(16px, normal, 300, $baseBackgroundColor);
+    font-style: normal;
+    background-color: $baseSelectColor;
+    padding: 15px 41px 15px 41px;
+    margin-bottom: 42px;
+    transition: all 0.3s;
+  }
+  &__checkout-link:hover {
+    color: #4A4A4A;
+    border: 1px solid #A4A4A4;
+    background-color: $baseBackgroundColor;
+  }
+}
+
 
 
 .main_button {
