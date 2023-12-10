@@ -636,6 +636,10 @@ ul {
   }
 }
 
+.reg-breadcrumbs-margin-bottom {
+  margin-bottom: 64px;
+}
+
 .cart-content {
   display: flex;
   justify-content: space-around;
@@ -810,7 +814,6 @@ ul {
     display: flex;
     justify-content: center;
   }
-
   &__checkout-link {
     @include fontTitle(16px, normal, 300, $baseBackgroundColor);
     font-style: normal;
@@ -826,7 +829,12 @@ ul {
   }
 }
 
-
+.reg-content {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 128px;
+  width: 100%;
+}
 
 .main_button {
   @extend %column_center;

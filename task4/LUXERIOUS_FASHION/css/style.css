@@ -740,6 +740,10 @@ ul {
   color: #f16d7f;
 }
 
+.reg-breadcrumbs-margin-bottom {
+  margin-bottom: 64px;
+}
+
 .cart-content {
   display: flex;
   justify-content: space-around;
@@ -975,6 +979,13 @@ ul {
   color: #4A4A4A;
   border: 1px solid #A4A4A4;
   background-color: #ffffff;
+}
+
+.reg-content {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 128px;
+  width: 100%;
 }
 
 .main_button {
