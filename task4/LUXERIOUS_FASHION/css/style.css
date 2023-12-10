@@ -987,6 +987,9 @@ ul {
   margin-bottom: 96px;
   width: 100%;
 }
+.reg-content__join {
+  width: 31%;
+}
 .reg-content__name-title {
   font-family: Lato, serif;
   font-size: 16px;
@@ -1000,7 +1003,7 @@ ul {
 .reg-content__inputs {
   gap: 20px;
   width: 100%;
-  margin-bottom: 31px;
+  margin-bottom: 34px;
 }
 .reg-content__field-input {
   width: 100%;
@@ -1052,6 +1055,9 @@ ul {
 .reg-content__radio-input[type=radio]:checked + .reg-content__radio-span {
   background-color: #f16d7f;
   border-color: #f16d7f;
+}
+.reg-content__article {
+  width: 57.05%;
 }
 .reg-content__article-title {
   font-family: Lato, serif;
