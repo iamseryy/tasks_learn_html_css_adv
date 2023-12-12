@@ -391,6 +391,50 @@ ul {
   }
 }
 
+.filters-box {
+  width: 100%;
+  padding-top: 39px;
+  padding-bottom: 64px;
+  position: relative;
+}
+.filter {
+  display: flex;
+  justify-content: flex-start;
+
+  &__details {
+    position: absolute;
+    width: 360px;
+    padding-top: 13px;
+    padding-left: 16px;
+    z-index: 2;
+    &[open] {
+      background: $baseBackgroundColor;
+      box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    }
+    &[open] .filter__summary {
+      color: $baseSelectColor;
+    }
+    &[open] path {
+      fill: $baseSelectColor;
+    }
+  }
+  &__summary {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    @include fontTitle(14px, normal, 600, #000);
+    font-style: normal;
+  }
+  &__details-item {
+    margin-top: 16px;
+  }
+  &__details-title {
+    @include fontTitle(14px, normal, 400, #6F6E6E);
+    font-style: normal;
+  }
+}
+
+
 .main_slider_prod {
   display: flex;
   justify-content: space-between;
@@ -659,10 +703,15 @@ ul {
 }
 
 .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 29px;
   &__card {
     background-color: #F8F8F8;
     max-width: 360px;
     position: relative;
+    margin-bottom: 30px;
   }
   &__card:hover {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
@@ -728,6 +777,29 @@ ul {
   }
 }
 
+.pagination-box {
+  border: 1px solid #EBEBEB;
+  margin-bottom: 96px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.pagination {
+  &__link {
+    @include fontTitle(16px, normal, 300, #C4C4C4);
+    font-style: normal;
+    float: left;
+    padding: 13px 8px;
+    transition: all .3s;
+    &_active {
+      @include fontTitle(16px, normal, 300, $baseSelectColor);
+      font-style: normal;
+    }
+  }
+  &__link:hover:not(&__link_active) {
+    color: $baseContentColor;
+  }
+}
 
 .main-top-reg {
   justify-content: flex-start;

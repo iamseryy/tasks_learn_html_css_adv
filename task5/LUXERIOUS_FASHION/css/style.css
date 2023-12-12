@@ -464,6 +464,59 @@ ul {
   color: #f16d7f;
 }
 
+.filters-box {
+  width: 100%;
+  padding-top: 39px;
+  padding-bottom: 64px;
+  position: relative;
+}
+
+.filter {
+  display: flex;
+  justify-content: flex-start;
+}
+.filter__details {
+  position: absolute;
+  width: 360px;
+  padding-top: 13px;
+  padding-left: 16px;
+  z-index: 2;
+}
+.filter__details[open] {
+  background: #ffffff;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+.filter__details[open] .filter__summary {
+  color: #f16d7f;
+}
+.filter__details[open] path {
+  fill: #f16d7f;
+}
+.filter__summary {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-family: Lato, serif;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  color: #000;
+  font-style: normal;
+}
+.filter__details-item {
+  margin-top: 16px;
+}
+.filter__details-title {
+  font-family: Lato, serif;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #6F6E6E;
+  font-style: normal;
+}
+
 .main_slider_prod {
   display: flex;
   justify-content: space-between;
@@ -768,10 +821,17 @@ ul {
   display: flex;
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 29px;
+}
 .cards__card {
   background-color: #F8F8F8;
   max-width: 360px;
   position: relative;
+  margin-bottom: 30px;
 }
 .cards__card:hover {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
@@ -850,6 +910,38 @@ ul {
   font-weight: 700;
   letter-spacing: 0.025em;
   color: #ffffff;
+}
+
+.pagination-box {
+  border: 1px solid #EBEBEB;
+  margin-bottom: 96px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.pagination__link {
+  font-family: Lato, serif;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  color: #C4C4C4;
+  font-style: normal;
+  float: left;
+  padding: 13px 8px;
+  transition: all 0.3s;
+}
+.pagination__link_active {
+  font-family: Lato, serif;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  color: #f16d7f;
+  font-style: normal;
+}
+.pagination__link:hover:not(.pagination__link_active) {
+  color: #222222;
 }
 
 .main-top-reg {
