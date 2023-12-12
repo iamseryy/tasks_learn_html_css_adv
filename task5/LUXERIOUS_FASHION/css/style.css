@@ -1,4 +1,4 @@
-.footer_top_right, .main_button, .main_items_section, .main_deals_left, .main_deals_col, .order_choose, .order_desc_header, .order_desc_box, .order, .main_items_header_prod, .main_header_indx, .main {
+.footer_top_right, .main_button, .cards__card-link, .main_items_section, .main_deals_left, .main_deals_col, .order_choose, .order_desc_header, .order_desc_box, .order, .main_items_header_prod, .main_header_indx, .main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@
   align-items: flex-start;
 }
 
-.footer_bottom_right_networks_item, .footer_top_left_review, .footer_top, .reg-content__radio-label, .main_items_item_add_link, .main_deals {
+.footer_bottom_right_networks_item, .footer_top_left_review, .footer_top, .reg-content__radio-label, .cards__cart-link, .main_items_item_add_link, .main_deals {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -766,6 +766,90 @@ ul {
 }
 .main_items_item:hover .main_items_item_add {
   display: flex;
+}
+
+.cards__card {
+  background-color: #F8F8F8;
+  max-width: 360px;
+  position: relative;
+}
+.cards__card:hover {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+}
+.cards__card:hover .cards__card-img {
+  filter: sepia(15%) brightness(30%);
+}
+.cards__card:hover .cards__cart {
+  display: flex;
+}
+.cards__card-link-fill {
+  background-color: #F7E4E2;
+}
+.cards__card-info-fill {
+  background-color: #F8F8F8;
+}
+.cards__card-info {
+  padding-top: 24px;
+  padding-left: 16px;
+  padding-right: 28px;
+}
+.cards__card-img {
+  transition: all 0.3s;
+}
+.cards__card-title {
+  font-family: Lato, serif;
+  font-size: 13px;
+  line-height: normal;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #000;
+  font-style: normal;
+  margin-bottom: 13px;
+}
+.cards__card-dsc {
+  font-family: Lato, serif;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  color: #5D5D5D;
+  font-style: normal;
+  margin-bottom: 18px;
+}
+.cards__card-price {
+  font-family: Lato, serif;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: #f16d7f;
+  font-style: normal;
+  padding-bottom: 20px;
+}
+.cards__cart {
+  display: none;
+  position: absolute;
+  top: 160px;
+  justify-content: center;
+  width: 100%;
+  pointer-events: none;
+}
+.cards__cart-link {
+  padding: 8px;
+  border: 1px solid #fff;
+  pointer-events: all;
+}
+.cards__cart-link:hover {
+  box-shadow: 0 0 8px #fff;
+}
+.cards__cart-title {
+  margin-left: 8px;
+  font-family: Lato, serif;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #ffffff;
 }
 
 .main-top-reg {
