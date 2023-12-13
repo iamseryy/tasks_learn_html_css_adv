@@ -1,4 +1,4 @@
-@import 'vars';
+@import "vars";
 @import "fonts";
 @import "positions";
 
@@ -53,6 +53,13 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+summary {
+  display: block;
+}
+summary::-webkit-details-marker {
+  display: none;
 }
 
 .container {
@@ -183,6 +190,18 @@ ul {
       }
     }
   }
+}
+
+.header_top_right_basket-img {
+  transition: all 0.3s;
+}
+
+.header_top_right_basket-img:hover {
+  path { fill: $baseSelectColor; }
+}
+
+.header_top_right__account{
+  display: none;
 }
 
 .browse_menu {
@@ -354,6 +373,12 @@ ul {
     }
   }
 }
+.header-box {
+  width: 100%;
+}
+.main_top_img1{
+  width: 100%;
+}
 
 .main-top-head {
     width: 100%;
@@ -392,11 +417,15 @@ ul {
 }
 
 .filters-box {
+  display: flex;
+  justify-content: flex-start;
+  gap: 34%;
   width: 100%;
   padding-top: 39px;
-  padding-bottom: 64px;
+  padding-bottom: 51px;
   position: relative;
 }
+
 .filter {
   display: flex;
   justify-content: flex-start;
@@ -404,8 +433,7 @@ ul {
   &__details {
     position: absolute;
     width: 360px;
-    padding-top: 13px;
-    padding-left: 16px;
+    padding: 13px 16px;
     z-index: 2;
     &[open] {
       background: $baseBackgroundColor;
@@ -428,7 +456,69 @@ ul {
   &__details-item {
     margin-top: 16px;
   }
+  &__details-item[open] .filter__details-title {
+    color: $baseSelectColor;
+  }
+  &__details-box {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding: 24px 16px;;
+  }
   &__details-title {
+    @include fontTitle(14px, normal, 400, #6F6E6E);
+    font-style: normal;
+    padding: 8px 11px 11px 11px;
+    border-bottom: 1px solid #EBEBEB;
+    border-left: 5px solid $baseSelectColor;
+  }
+  &__details-link {
+    @include fontTitle(14px, normal, 400, #6F6E6E);
+    font-style: normal;
+    transition: all 0.3s;
+    &:hover {
+      color: $baseSelectColor;
+    }
+  }
+}
+
+.sort {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding-top: 13px;
+  position: relative;
+  &__details {
+    position: relative;
+  }
+  &__summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include fontTitle(14px, normal, 400, #6F6E6E);
+    font-style: normal;
+    transition: all 0.3s;
+  }
+  &__summary:hover {
+       color: $baseSelectColor;
+     }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
+    padding: 7px 30px 11px 9px;
+    position: absolute;
+    left: -9px;
+    top: 22px;
+    z-index: 2;
+  }
+
+  &__check {
+    display: flex;
+    gap: 9px;
+    align-items: center;
     @include fontTitle(14px, normal, 400, #6F6E6E);
     font-style: normal;
   }
@@ -543,6 +633,7 @@ ul {
           height: 35px;
           border: 1px solid #eaeaea;
           background-color: #ffffff;
+          padding-left: 15px;
         }
         &_val {
           width: 144px;
@@ -812,6 +903,7 @@ ul {
   justify-content: space-around;
   margin-bottom: 128px;
   width: 100%;
+  padding-top: 96px;
   &__cart{
     width: 68.4%;
   }
@@ -854,7 +946,7 @@ ul {
   &__input {
     @include fontTitle(18px, normal, 400, #656565);
     font-style: normal;
-    width: 44px;
+    width: 60px;
     padding-left: 16px;
     margin-left: 24px;
     border: 1px solid #EAEAEA;
@@ -1132,11 +1224,12 @@ ul {
 .main_features {
   margin-bottom: 97px;
   &_content {
+    width: 100%;
     background-color: #222224;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 36px;
+    gap: 2%;
     &_list {
       @extend %column_start;
       gap: 30px;
@@ -1149,7 +1242,6 @@ ul {
           margin-right: 34px;
         }
         &_desc {
-
           &_title {
             @include fontTitle(20px, 1.2, 700, #fbfbfb);
             margin-bottom: 17px;
@@ -1160,8 +1252,17 @@ ul {
           }
         }
       }
+      width: 100%;
     }
   }
+}
+
+.main_features_content_img-box {
+  width: 100%;
+}
+
+.main_features_content_img {
+  width: 100%;
 }
 
 .footer_top {
@@ -1346,3 +1447,4 @@ ul {
   }
 }
 
+@import "media-tablet";

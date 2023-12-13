@@ -1,0 +1,75 @@
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header_top {
+    justify-content: space-around;
+  }
+
+  .header_top_right_button{
+    display: none;
+  }
+
+  .header_top_right__account{
+    display: block;
+    color: $baseContentColor;
+    font-size: 28px;
+    transition: all 0.3s;
+  }
+
+  .header_top_right__account:hover{
+    color: $baseSelectColor;
+  }
+
+  .header_nav_menu_list:hover .menu_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 10;
+  }
+
+  .main_top_head {
+    left: 10%;
+  }
+
+  .main_top_head_content_title {
+    font-size: 40px;
+  }
+
+  .main_top_head_content_subtitle {
+    font-size: 20px;
+  }
+
+  .main_features_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer_top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    &_left {
+      width: 70%;
+    }
+  }
+
+  .footer_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_left {
+      width: 60%;
+    }
+
+  }
+
+  .footer_bottom_left {
+    padding-left: 1%;
+  }
+  .footer_bottom_right {
+    padding-right: 1%;
+  }
+
+}
