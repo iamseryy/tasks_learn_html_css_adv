@@ -388,12 +388,14 @@ summary::-webkit-details-marker {
     align-items: center;
     background-color: #F8F3F4;
     &__title {
+      padding-left: 3%;
       @include fontTitle(24px, normal, 400, $baseSelectColor);
     }
 }
 
 .breadcrumbs {
   display: flex;
+  margin-right: 3%;
   &__list {
     display: flex;
   }
@@ -413,6 +415,10 @@ summary::-webkit-details-marker {
   &__item:last-child .breadcrumbs__link {
     font-weight: 700;
     color: $baseSelectColor;
+  }
+  &__item{
+    display: flex;
+
   }
 }
 
@@ -676,11 +682,15 @@ summary::-webkit-details-marker {
   margin-bottom: 100px;
   gap: 20px;
   &_col {
+    width: 100%;
     @extend %column_center;
     &_item {
       display: flex;
       justify-content: center;
       position: relative;
+      &_img {
+        width: 100%;
+      }
       &_info {
         padding: 1rem 1rem 1rem 1rem;
         position: absolute;
@@ -724,16 +734,16 @@ summary::-webkit-details-marker {
   margin-bottom: 79px;
 }
 
-@supports (display: grid) {
-  .main_items {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 50% 50%;
-    grid-column-gap: 3%;
-    grid-row-gap: 4%;
-  }
-}
+//@supports (display: grid) {
+//  .main_items {
+//    display: grid;
+//    justify-content: center;
+//    grid-template-columns: 25% 25% 25% 25%;
+//    grid-template-rows: 50% 50%;
+//    grid-column-gap: 3%;
+//    grid-row-gap: 4%;
+//  }
+//}
 
 .main_items {
   &_title {
@@ -796,13 +806,15 @@ summary::-webkit-details-marker {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 30px;
   margin-bottom: 29px;
+  padding-left: 1%;
+  padding-right: 1%;
   &__card {
     background-color: #F8F8F8;
     max-width: 360px;
     position: relative;
-    margin-bottom: 30px;
   }
   &__card:hover {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
@@ -906,6 +918,7 @@ summary::-webkit-details-marker {
   padding-top: 96px;
   &__cart{
     width: 68.4%;
+    padding-left: 1%;
   }
   &__list {
     display: flex;
@@ -982,6 +995,7 @@ summary::-webkit-details-marker {
   }
   &__checkout {
     width: 31.6%;
+    padding-right: 1%;
   }
   &__form {
     @extend %column_start;
@@ -1231,13 +1245,17 @@ summary::-webkit-details-marker {
     align-items: center;
     gap: 2%;
     &_list {
+      width: 40%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-right: 30px;
       @extend %column_start;
       gap: 30px;
       &_item {
+
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        margin-right: 43px;
         &_icon {
           margin-right: 34px;
         }
@@ -1252,7 +1270,6 @@ summary::-webkit-details-marker {
           }
         }
       }
-      width: 100%;
     }
   }
 }
