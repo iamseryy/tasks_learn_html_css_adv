@@ -927,14 +927,19 @@ summary::-webkit-details-marker {
   display: flex;
 }
 
+.cards-box {
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-bottom: 20px;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   margin-bottom: 29px;
-  padding-left: 1%;
-  padding-right: 1%;
+  max-width: 1140px;
 }
 .cards__card {
   background-color: #F8F8F8;
