@@ -1,0 +1,147 @@
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .header_top_left_logo_title {
+    display: none;
+  }
+
+  .header_top_left_search_input {
+    display: none;
+  }
+
+  .header_top_right_button{
+    display: none;
+  }
+
+  .header_top_right__account{
+    display: block;
+    color: $baseContentColor;
+    font-size: 28px;
+    transition: all 0.3s;
+
+  }
+
+  .header_nav {
+    display: none;
+  }
+
+  .main_top {
+    margin-bottom: 64px;
+  }
+
+  .main_top_head_content_title {
+    font-size: 38px;
+  }
+  .main_top_head_content_subtitle {
+    font-size: 20px;
+  }
+
+  .main_deals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .main_deals_col_item_info_subtitle {
+    font-size: 16px;
+  }
+  .main_deals_col_item_info_title {
+    font-size: 24px;
+  }
+
+  .main_header_indx {
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+
+  .main_items {
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  .main_features {
+    margin-bottom: 0;
+  }
+
+  .main_features_content_img-box {
+    display: none;
+  }
+
+  .main_features_content_list {
+    width: 100%;
+    padding: 48px 30px 81px 30px;
+    gap: 47px;
+  }
+
+  .main_features_content_list_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main_features_content_list_item_icon {
+    margin-right: 0;
+    margin-bottom: 27px;
+  }
+  .main_features_content_list_item_desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main_features_content_list_item_desc_title {
+    margin-bottom: 14px;
+  }
+
+  .main_features_content_list_item_desc_parag {
+    max-width: 320px;
+  }
+
+  .footer_top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    &_left {
+      width: 70%;
+    }
+  }
+
+  .footer_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_left {
+      width: 60%;
+    }
+
+  }
+
+  .footer_bottom_left {
+    padding-left: 1%;
+  }
+
+  .footer_bottom_right {
+    padding-right: 1%;
+  }
+
+  .footer_top {
+    margin-bottom: 0;
+    height: 609px;
+    gap: 59px;
+  }
+
+  .footer_top_left_review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer_top_left_review_photo {
+    padding-top: 60px;
+  }
+  .footer_top_right_form-inp-box {
+    margin-bottom: 50px;
+  }
+
+  .footer_center {
+    display: none;
+  }
+
+}
