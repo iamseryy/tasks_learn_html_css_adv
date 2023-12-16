@@ -76,12 +76,16 @@ summary::-webkit-details-marker {
 }
 
 .header {
+  position: relative;
+
   &_top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100px;
     margin-bottom: 19px;
+    padding-left: 1%;
+    padding-right: 1%;
     &_left {
       display: flex;
       align-items: center;
@@ -172,7 +176,6 @@ summary::-webkit-details-marker {
       justify-content: center;
       gap: $topMenuGap;
       margin-bottom: 22px;
-
       &_list {
         position: relative;
         &_link {
@@ -205,6 +208,32 @@ summary::-webkit-details-marker {
   display: none;
 }
 
+.burger {
+  display: none;
+}
+
+#burger-menu {
+  position: absolute;
+  //left: -999999px;
+  visibility: hidden;
+  &:checked ~ .burger-nav {
+    display: none;
+  }
+}
+
+.burger-nav {
+  background: $baseBackgroundColor;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  width: 232px;
+  padding: 32px;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 777;
+  top: 94px;
+  right: 0px;
+  transition: right .3s;
+}
+
 .browse_menu {
   position: relative;
 }
@@ -214,7 +243,7 @@ summary::-webkit-details-marker {
   display: none;
   position: absolute;
   background-color: $baseBackgroundColor;
-  z-index: 2;
+  z-index: 10;
 }
 
 .browse_menu:hover .browse_menu_items {
@@ -363,6 +392,7 @@ summary::-webkit-details-marker {
       display: flex;
       flex-direction: column;
       padding-left: 12px;
+      border-left: 12px solid #F16D7F;
       &_title {
         @include fontTitle(60px, 1.2, 900, $baseContentColor);
       }
@@ -458,6 +488,9 @@ summary::-webkit-details-marker {
     display: flex;
     align-items: center;
     gap: 11px;
+
+  }
+  &__summary-title {
     @include fontTitle(14px, normal, 600, #000);
     font-style: normal;
   }
@@ -809,9 +842,8 @@ summary::-webkit-details-marker {
     display: flex;
   }
 }
+
 .cards-box {
-  padding-left: 1%;
-  padding-right: 1%;
   margin-bottom: 20px;
 }
 
@@ -821,7 +853,6 @@ summary::-webkit-details-marker {
   justify-content: center;
   gap: 30px;
   margin-bottom: 29px;
-  max-width: $baseWidth;
   &__card {
     background-color: #F8F8F8;
     max-width: 360px;
@@ -937,12 +968,18 @@ summary::-webkit-details-marker {
     flex-direction: column;
     gap: 40px;
     margin-bottom: 72px;
+    max-width: 652px;
   }
   &__item {
     display: flex;
     box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+    width: 100%;
     position: relative;
-    max-width: 652px;
+
+  }
+  &__item-link {
+    display: flex;
+    position: relative;
   }
   &__dsc {
     padding: 22px 97px 62px 31px;
@@ -1400,6 +1437,7 @@ summary::-webkit-details-marker {
   margin-bottom: 89px;
   &_left {
     width: 40%;
+    padding-left: 2%;
     &_section {
       @extend %column_start;
       gap: 29px;
@@ -1446,6 +1484,9 @@ summary::-webkit-details-marker {
   align-items: center;
   height: 79px;
   background-color: $baseItemBackgroundColor;
+  &_left {
+    padding-left: 2%;
+  }
   &_left_copyright{
     font-family: Lato;
     font-size: 16px;
@@ -1453,6 +1494,9 @@ summary::-webkit-details-marker {
     font-weight: 400;
     letter-spacing: 0.025em;
     color: #7a7a7a;
+  }
+  &_right {
+    padding-right: 2%;
   }
   &_right_networks {
     display: flex;
