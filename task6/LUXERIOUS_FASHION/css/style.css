@@ -489,6 +489,7 @@ summary::-webkit-details-marker {
 }
 .main-top-head__title {
   padding-left: 3%;
+  padding-right: 3%;
   font-family: Lato, serif;
   font-size: 24px;
   line-height: normal;
@@ -499,7 +500,8 @@ summary::-webkit-details-marker {
 
 .breadcrumbs {
   display: flex;
-  margin-right: 3%;
+  padding-right: 3%;
+  padding-left: 3%;
 }
 .breadcrumbs__list {
   display: flex;
@@ -663,16 +665,22 @@ summary::-webkit-details-marker {
   font-style: normal;
 }
 
+.order-section {
+  width: 100%;
+}
+
 .main_slider_prod {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   height: 777px;
   background-color: #f7f7f7;
   border: 1px solid #eaeaea;
+  position: relative;
 }
 .main_slider_prod_angles_angle {
+  position: absolute;
+  top: 350px;
   padding: 16px 18px 17px 21px;
   background-color: rgba(42, 42, 42, 0.14);
   color: #ffffff;
@@ -683,6 +691,14 @@ summary::-webkit-details-marker {
   background-color: #ffffff;
 }
 
+.angle-left {
+  right: calc(100% - 50px);
+}
+
+.angle-right {
+  left: calc(100% - 49px);
+}
+
 .order {
   border-left: 1px solid #eaeaea;
   border-right: 1px solid #eaeaea;
@@ -690,6 +706,7 @@ summary::-webkit-details-marker {
   margin-bottom: 119px;
 }
 .order_desc {
+  z-index: 10;
   background-color: #ffffff;
   padding-top: 73px;
   margin-top: -70px;
@@ -2246,6 +2263,7 @@ summary::-webkit-details-marker {
   }
   .order_desc_attr {
     margin-bottom: 37px;
+    gap: 24px;
   }
   .order_choose_attr {
     gap: 24px;

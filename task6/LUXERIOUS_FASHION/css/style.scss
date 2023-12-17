@@ -421,13 +421,15 @@ summary::-webkit-details-marker {
     background-color: #F8F3F4;
     &__title {
       padding-left: 3%;
+      padding-right: 3%;
       @include fontTitle(24px, normal, 400, $baseSelectColor);
     }
 }
 
 .breadcrumbs {
   display: flex;
-  margin-right: 3%;
+  padding-right: 3%;
+  padding-left: 3%;
   &__list {
     display: flex;
   }
@@ -565,28 +567,45 @@ summary::-webkit-details-marker {
   }
 }
 
+.order-section {
+  width: 100%;
+
+}
 
 .main_slider_prod {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   height: 777px;
   background-color: #f7f7f7;
   border: 1px solid #eaeaea;
+  position: relative;
   &_angles {
+
     &_angle {
+      position: absolute;
+      top: 350px;
       padding: 16px 18px 17px 21px ;
       background-color: rgba(42,42,42,0.14);
       color: $baseBackgroundColor;
       transition: all 0.3s;
     }
+
     &_angle:hover {
       color: rgba(42,42,42,0.14);
       background-color: $baseBackgroundColor;
     }
   }
 }
+
+.angle-left {
+  right: calc(100% - 50px);
+}
+
+.angle-right {
+  left: calc(100% - 49px);
+}
+
 
 .main_order {
 
@@ -599,7 +618,7 @@ summary::-webkit-details-marker {
   border-bottom: 1px solid #eaeaea;
   margin-bottom: 119px;
   &_desc {
-
+z-index: 10;
     background-color: $baseBackgroundColor;
     padding-top: 73px;
     margin-top: -70px;
